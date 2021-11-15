@@ -83,9 +83,9 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Alipay
-PRODUCT_PACKAGES += \
-    org.ifaa.android.manager
+## Alipay
+#PRODUCT_PACKAGES += \
+#    org.ifaa.android.manager
 
 #PRODUCT_BOOT_JARS += \
 #    org.ifaa.android.manager
