@@ -140,9 +140,6 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 # RIL
 TARGET_USES_OLD_MNC_FORMAT := true
 
-# Security patch level
-VENDOR_SECURITY_PATCH := 2020-01-01
-
 # SELinux
 #BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/temp
 #include device/qcom/sepolicy-legacy-um/SEPolicy.mk
