@@ -47,4 +47,7 @@ done
 
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
+echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+
 setprop vendor.post_boot.parsed 1
