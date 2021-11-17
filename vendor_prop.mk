@@ -251,9 +251,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.delta_time.enable=true
 
-# WFD
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.wfd.virtual=0
+## WFD
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.sys.wfd.virtual=0
 
 # Wlan
 PRODUCT_PROPERTY_OVERRIDES += \
