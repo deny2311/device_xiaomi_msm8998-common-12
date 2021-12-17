@@ -23,8 +23,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 PRODUCT_COMPRESSED_APEX := false
 
 # Overlay
-DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    CarrierConfigOverlay \
+    CellBroadcastReceiverOverlay \
+    DialerOverlay \
+    FrameworksResOverlay \
+    SettingsOverlay \
+    SettingsProviderOverlay \
+    SystemUIOverlay \
+    TelecommOverlay \
+    TelephonyOverlay \
+    TetheringConfigOverlay \
+    WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
     framework-res
@@ -413,7 +423,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor \
-    CarrierConfigOverlay \
     rild \
     librmnetctl \
     libprotobuf-cpp-full
@@ -444,10 +453,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# Tethering
-PRODUCT_PACKAGES += \
-    TetheringConfigOverlay
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -470,8 +475,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     hostapd \
     wpa_supplicant \
-    wpa_supplicant.conf \
-    WifiOverlay
+    wpa_supplicant.conf
 
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service
