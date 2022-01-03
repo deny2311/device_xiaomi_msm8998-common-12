@@ -33,7 +33,6 @@ PRODUCT_PACKAGES += \
     SystemUIOverlay \
     TelecommOverlay \
     TelephonyOverlay \
-    TetheringConfigOverlay \
     WifiOverlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := \
