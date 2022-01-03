@@ -28,6 +28,7 @@ PRODUCT_PACKAGES += \
     CellBroadcastReceiverOverlay \
     DialerOverlay \
     FrameworksResOverlay \
+    SettingsLibOverlay \
     SettingsOverlay \
     SettingsProviderOverlay \
     SystemUIOverlay \
