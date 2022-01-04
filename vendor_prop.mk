@@ -157,9 +157,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.vendor.qti.telephony.vt_cam_interface=1
 
-# IORap app launch prefetching using Perfetto traces and madvise
+# IORap
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.iorapd.enable=true
+    persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
