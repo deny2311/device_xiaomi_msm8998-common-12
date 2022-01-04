@@ -100,6 +100,11 @@ PRODUCT_COPY_FILES += \
 #PRODUCT_BOOT_JARS += \
 #    org.ifaa.android.manager
 
+# ART
+PRODUCT_DEXPREOPT_SPEED_APPS += \
+    Settings \
+    SystemUI
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
