@@ -157,6 +157,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.dbg.vt_avail_ovr=1 \
     persist.vendor.qti.telephony.vt_cam_interface=1
 
+# IORap app launch prefetching using Perfetto traces and madvise
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.iorapd.enable=true
+
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.stagefright.omx_default_rank.sw-audio=1 \
