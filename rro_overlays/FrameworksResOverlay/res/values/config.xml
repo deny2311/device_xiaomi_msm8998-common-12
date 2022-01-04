@@ -329,7 +329,7 @@
     <integer name="config_longPressOnPowerBehavior">1</integer>
 
     <!-- Control the behavior when the user presses the power and volume up buttons together.
-            0 - Nothing
+            0 - Nothingº
             1 - Mute toggle
             2 - Global actions menu
     -->
@@ -340,6 +340,11 @@
          manager will disable alpha trasformation in animations where not
          strictly needed. -->
     <bool name="config_sf_limitedAlpha">true</bool>
+
+    <!-- Enables or disables fading edges when marquee is enabled in TextView.
+         Off by default, since the framebuffer readback used to implement the
+         fading edges is prohibitively expensive on most GPUs. -->
+    <bool name="config_ui_enableFadingMarquee">true</bool>
 
     <!-- Enable ACS (auto channel selection) for Wifi hotspot (SAP) -->
     <bool translatable="false" name="config_wifi_softap_acs_supported">false</bool>
