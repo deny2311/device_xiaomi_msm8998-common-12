@@ -127,6 +127,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.hw=1 \
     debug.sf.latch_unsignaled=0 \
+    renderthread.skia.reduceopstasksplitting=true \
     ro.hardware.egl=adreno \
     ro.hardware.vulkan=adreno \
     ro.opengles.version=196610 \
