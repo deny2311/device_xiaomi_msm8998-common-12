@@ -139,7 +139,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.enable_fb_ubwc=1 \
     vendor.display.disable_rotator_downscale=1 \
     vendor.display.disable_scaler=0 \
-    debug.hwui.use_buffer_age=false
+    debug.hwui.use_buffer_age=false \
+    debug.sf.recomputecrop=0
 
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
