@@ -105,6 +105,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
     SystemUI
 
+PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
+
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
