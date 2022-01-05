@@ -14,6 +14,15 @@
 # limitations under the License.
 #
 
+# ART
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.boot-dex2oat-threads=8 \
+    dalvik.vm.dex2oat-threads=8 \
+    dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.image-dex2oat-threads=8 \
+    ro.sys.fw.dex2oat_thread_count=8 \
+    ro.vendor.qti.am.reschedule_service=true
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     aaudio.hw_burst_min_usec=2000 \
