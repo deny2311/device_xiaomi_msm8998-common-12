@@ -61,4 +61,7 @@
 
     <!-- QS tile title -->
     <string name="dirac_qs_tile_title">Mi Sound</string>
+    
+    <string name="switch_bar_on">Activado</string>
+    <string name="switch_bar_off">Desactivado</string>
 </resources>
