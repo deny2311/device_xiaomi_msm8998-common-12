@@ -44,7 +44,7 @@ public final class DeviceSettings extends PreferenceFragment {
     private static final String KEY_CATEGORY_USB_FASTCHARGE = "usb_fastcharge";
 
     private final String KEY_DEVICE_DOZE = "device_doze";
-    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
+    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "com.huexxx.settings.doze";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
