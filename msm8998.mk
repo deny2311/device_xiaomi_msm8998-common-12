@@ -30,7 +30,6 @@ PRODUCT_PACKAGES += \
     FrameworksResOverlay \
     SettingsLibOverlay \
     SettingsOverlay \
-    SettingsProviderOverlay \
     SystemUIOverlay \
     TelecommOverlay \
     TelephonyOverlay \
