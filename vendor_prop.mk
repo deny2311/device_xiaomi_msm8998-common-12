@@ -153,6 +153,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false \
     debug.sf.recomputecrop=0
 
+# Disable vsync for cpu rendered apps
+PRODUCT_PROPERTY_OVERRIDES += \
+    debug.cpurend.vsync=false
+
 # DPM
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpm.feature=1 \
