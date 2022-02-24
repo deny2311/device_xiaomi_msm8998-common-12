@@ -290,7 +290,6 @@ vendor/lib64/libqmi_encdec.so|5e536057be350651379b772aa1bba5f4735d11ee
 vendor/lib64/libqmiservices.so|0c2930a50082aa9e9d341bd4286971e9143fd358
 
 # RIL - from jasmine V11.0.28.0.QDIMIXM
--system_ext/app/datastatusnotification/datastatusnotification.apk|f31903b82011294a6c6d0669067423d41be71dda
 -system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|8cc946423fb6d5240f32a34c57c78a4581ca4465
 -system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|7327981ef14fcd6e87732851f77505676eb4b849
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
