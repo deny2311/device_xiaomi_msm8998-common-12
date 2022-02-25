@@ -437,6 +437,10 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
+    libcnefeatureconfig \
+    libxml2
+
+PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.2 \
     android.hardware.radio.config@1.2.vendor \
     android.hardware.radio@1.2 \
@@ -495,8 +499,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ipacm \
     IPACM_cfg.xml \
+    libcld80211 \
+    libQWiFiSoftApCfg \
+    libwifi-hal-ctrl \
     libwpa_client \
     hostapd \
+    dhcpcd.conf \
+    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
