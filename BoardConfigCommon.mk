@@ -139,6 +139,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
+
 # SELinux
 #BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/temp
 #include device/qcom/sepolicy-legacy-um/SEPolicy.mk
