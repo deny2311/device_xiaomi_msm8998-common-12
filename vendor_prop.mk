@@ -243,7 +243,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.sib16_support=1 \
     ro.telephony.default_cdma_sub=0 \
     ro.telephony.default_network=22,20 \
-    ro.telephony.iwlan_operation_mode=legacy \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
     vendor.service.qti.ims.enabled=1 \
