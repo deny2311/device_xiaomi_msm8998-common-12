@@ -246,7 +246,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
     vendor.service.qti.ims.enabled=1 \
-    vendor.voice.path.for.pcm.voip=true
+    vendor.voice.path.for.pcm.voip=true \
+    rild.libpath="/vendor/lib64/libril-qc-hal-qmi.so" \
+    vendor.rild.libpath="/vendor/lib64/libril-qc-hal-qmi.so"
 
 # Sensors
 PRODUCT_PROPERTY_OVERRIDES += \
