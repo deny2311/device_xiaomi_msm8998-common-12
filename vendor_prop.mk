@@ -219,9 +219,12 @@ PRODUCT_ODM_PROPERTIES += \
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
+    DEVICE_PROVISIONED=1 \
+    persist.dbg.volte_avail_ovr=1 \
+    persist.dbg.vt_avail_ovr=1 \
+    persist.dbg.wfc_avail_ovr=1 \
     persist.radio.multisim.config=dsds \
     persist.rmnet.data.enable=true \
-    persist.vendor.data.iwlan.enable=true \
     persist.vendor.data.mode=concurrent \
     persist.vendor.ims.disableADBLogs=1 \
     persist.vendor.ims.disableDebugLogs=1 \
@@ -232,14 +235,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.force_on_dc=true \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.redir_party_num=1 \
     persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
     ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=22,22 \
+    ro.telephony.default_network=22,20 \
+    ro.telephony.iwlan_operation_mode=legacy \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
+    vendor.service.qti.ims.enabled=1 \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors
