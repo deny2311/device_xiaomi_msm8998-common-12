@@ -43,6 +43,9 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
 
+# DRM
+drm.service.enabled=true
+
 # FRP
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
