@@ -248,15 +248,6 @@ vendor/lib/libvpphvx.so|73fe8a025b63960da5e1d188da71736bde0a86b3
 vendor/lib/libvpplibrary.so|0d4cce9d171692e0f8dec30df2547c808a308283
 vendor/lib/libvqzip.so|c1c4f35456ff34b4baba373f18ed034a7d1e2721
 
-# Mlipay
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|12c609b67faa511e17f7e085e91806dd87971779
-vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|9c645498672f0ca75e31ee388195c3f076086fe4
-vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so|e4343268b26daf3cf219862ef5c8e3d0c6471d77
-vendor/bin/mlipayd@1.1|a68d7e5e30199018b9dfe845866940ed2c143279
-vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay.so|4f06a5a60de1f5da98db4ccfd01ea504e8d4e979
-vendor/lib64/libmlipay@1.1.so|ebed2a0791a9aae8a6bd344f6c05e87776ba72ca
-
 # NFC firmware
 vendor/lib/libpn553_fw.so|c0b53ec8b330cd2c077b2bea6a7d5284151ec513
 
@@ -298,13 +289,6 @@ vendor/lib64/libsensor1.so|42e754146c2d697608934f9fc065d8263aa597c9
 vendor/lib64/libsensor_reg.so|cee932c0b89e7d4e3dd7135c7645a5076eadb8dc
 vendor/lib64/libsns_low_lat_stream_stub.so|326637595214dd00c8ed09b57eeee11988269a86
 vendor/lib64/sensors.ssc.so|449a7a5db27d95c1b8c9090db619adb57f39570b
-
-# Soter
--system_ext/app/SoterService/SoterService.apk|1ef5c7f47d2595f71d69a45237ea999cc517cb91
-vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|6dd2ec266b2597210edf80f83f81ddc9a7893bbb
-vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
-vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|40e53463c5c54a6dc71bac044c730e445674c232
-vendor/lib64/vendor.qti.hardware.soter@1.0.so|3cac6f020bb43c4d411afcc0669e45d89ec80400
 
 # Thermal
 vendor/bin/thermal-engine|d63aa61a818b5ebd8378fd101d7b49591c7afe4a
