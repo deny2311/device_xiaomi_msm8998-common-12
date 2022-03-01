@@ -102,6 +102,9 @@ on post-fs-data
     chown system system /mnt/vendor/persist/PRSensorData.txt
     chmod 0600 /mnt/vendor/persist/PRSensorData.txt
 
+    # Create /data/time folder for time-services
+    mkdir /data/vendor/time/ 0700 system system
+
     setprop vold.post_fs_data_done 1
 
     # Create PERFD deamon related dirs
@@ -288,12 +291,6 @@ service vendor.msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/vendo
     class core
     user root
     group root
-
-service vendor.time_daemon /system/vendor/bin/time_daemon
-    class main
-    user root
-    group root
-    task_profiles ServiceCapacityLow
 
 service vendor.power_off_alarm /system/vendor/bin/power_off_alarm
     class core

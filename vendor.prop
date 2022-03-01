@@ -151,8 +151,5 @@ ro.vendor.sensors.taptap_gesture=true
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
 
-# Time services
-persist.vendor.delta_time.enable=true
-
 # VoLTE
 persist.vendor.qti.telephony.vt_cam_interface=1
