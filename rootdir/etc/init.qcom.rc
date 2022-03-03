@@ -33,6 +33,8 @@ on post-fs
     chmod 0755 /sys/kernel/debug/tracing
 
 on post-fs-data
+    write /sys/class/graphics/fb0/idle_time 100
+
     mkdir /data/vendor/misc 01771 system system
 
     # Create directory used by display clients
