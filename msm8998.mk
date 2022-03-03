@@ -310,9 +310,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libavservices_minijail.vendor
 
-# IORAP
-include build/make/target/product/iorap_large_memory_config.mk
-
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \

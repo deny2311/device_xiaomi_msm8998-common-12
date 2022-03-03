@@ -49,9 +49,6 @@ drm.service.enabled=true
 # FRP
 ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
 
-# IORap
-persist.device_config.runtime_native_boot.iorap_readahead_enable=true
-
 # Media
 debug.stagefright.omx_default_rank.sw-audio=1
 debug.stagefright.omx_default_rank=0
