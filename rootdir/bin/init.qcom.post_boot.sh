@@ -34,7 +34,7 @@ do
     echo 50 > $cpubw/polling_interval
     echo "3143 5859 11863 13763" > $cpubw/bw_hwmon/mbps_zones
     echo 4 > $cpubw/bw_hwmon/sample_ms
-    echo 34 > $cpubw/bw_hwmon/io_percent
+    echo 50 > $cpubw/bw_hwmon/io_percent
     echo 20 > $cpubw/bw_hwmon/hist_memory
     echo 10 > $cpubw/bw_hwmon/hyst_length
     echo 0 > $cpubw/bw_hwmon/low_power_ceil_mbps
@@ -45,15 +45,22 @@ do
     echo 1600 > $cpubw/bw_hwmon/idle_mbps
 done
 
-for memlat in /sys/class/devfreq/*qcom,memlat-cpu*
-do
-    echo "mem_latency" > $memlat/governor
-    echo 10 > $memlat/polling_interval
-    echo 400 > $memlat/mem_latency/ratio_ceil
-done
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
+# configure governor settings for little cluster
 echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
+echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
+
+# configure governor settings for big cluster
 echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
+echo 10000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
+echo 500 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
+
+# Set up schedtune
+echo 30 > /dev/stune/top-app/schedtune.sched_boost_no_override
+
+# disable thermal and BCL hotplug
+echo 0 > /sys/module/msm_thermal/core_control/enabled
 
 setprop vendor.post_boot.parsed 1
