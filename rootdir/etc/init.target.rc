@@ -123,6 +123,9 @@ on init
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 300000
     write /sys/devices/system/cpu/cpu4/cpufreq/interactive/ignore_hispeed_on_notif 1
 
+    # Enable thermal and BCL hotplug
+    write /sys/module/msm_thermal/core_control/enabled 1
+
     # Enable input boost configuration
     write /sys/module/cpu_boost/parameters/input_boost_freq "0:1324800"
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
@@ -149,10 +152,10 @@ on init
     chmod 0660 /dev/cpuset/camera-daemon/tasks
 
     # ZRAM setup
-    write /sys/block/zram0/comp_algorithm lz4
-    write /sys/block/zram0/disksize 1073741824
-    write /sys/block/zram0/max_comp_streams 8
-    write /proc/sys/vm/page-cluster 0
+    #write /sys/block/zram0/comp_algorithm lz4
+    #write /sys/block/zram0/disksize 1073741824
+    #write /sys/block/zram0/max_comp_streams 8
+    #write /proc/sys/vm/page-cluster 0
 
 on fs
     mount_all /vendor/etc/fstab.qcom
@@ -162,6 +165,7 @@ on fs
     mkdir /mnt/vendor/persist/audio 0755 system system
     mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth bluetooth
     mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/hvdcp_opti 0770 root system
     mkdir /mnt/vendor/persist/time 0770 system system
     mkdir /mnt/vendor/persist/wlan_bt 0770 system system
 
@@ -172,10 +176,6 @@ on post-fs-data
     # Create directory for thermal engine
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
-
-on boot
-    # Load QCACLD WLAN driver
-    insmod /vendor/lib/modules/wlan.ko
 
 on property:sys.boot_completed=1
     # Enable UFS powersaving
@@ -200,7 +200,7 @@ on property:sys.boot_completed=1
 
     # Enable ZRAM on boot_complete
     swapon_all /vendor/etc/fstab.qcom
-    write /proc/sys/vm/swappiness 100
+    #write /proc/sys/vm/swappiness 100
 
     # Run post poot script
     start vendor.qcom-post-boot
@@ -280,8 +280,41 @@ service vendor.adsprpcd /vendor/bin/adsprpcd
     group media
     task_profiles ServiceCapacityLow
 
+service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
+    class main
+    user radio
+    socket ims_qmid stream 0660 system radio
+    group radio log vendor_qti_diag
+    task_profiles ServiceCapacityLow
+
+service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
+    class main
+    user radio
+    socket ims_datad stream 0660 system radio
+    group radio wifi inet log vendor_qti_diag
+    disabled
+    task_profiles ServiceCapacityLow
+
 service vendor.pd_mapper /vendor/bin/pd-mapper
     class core
+
+on property:vendor.ims.QMI_DAEMON_STATUS=1
+    start vendor.imsdatadaemon
+
+service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
+    class main
+    user radio
+    group radio vendor_qti_diag inet log
+    task_profiles ServiceCapacityLow
+
+service vendor.imsrcsservice /vendor/bin/imsrcsd
+    class main
+    user radio
+    group radio vendor_qti_diag inet log wakelock
+    task_profiles ServiceCapacityLow
+
+on property:vendor.ims.DATA_DAEMON_STATUS=1
+    restart vendor.ims_rtp_daemon
 
 service vendor.hvdcp_opti /vendor/bin/hvdcp_opti
     class main

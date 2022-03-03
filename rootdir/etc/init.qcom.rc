@@ -54,6 +54,7 @@ on post-fs-data
 
     # Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
+    mkdir /data/vendor/tombstones/rfs 0771 system system
 
     mkdir /data/vendor/ramdump 0771 root system
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
@@ -224,6 +225,16 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     group system radio
     task_profiles ServiceCapacityLow
 
+service vendor.netmgrd /vendor/bin/netmgrd
+    class main
+    task_profiles ServiceCapacityLow
+
+service vendor.dataqti /vendor/bin/qti
+    class main
+    user radio
+    group radio oem_2901 diag usb net_admin
+    task_profiles ServiceCapacityLow
+
 service vendor.sensors /vendor/bin/sensors.qti
     class main
     user system
@@ -277,6 +288,12 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqb
     class core
     user root
     group root
+
+service vendor.time_daemon /vendor/bin/time_daemon
+    class main
+    user root
+    group root
+    task_profiles ServiceCapacityLow
 
 service vendor.power_off_alarm /vendor/bin/power_off_alarm
     class core
