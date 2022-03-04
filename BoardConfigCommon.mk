@@ -103,7 +103,6 @@ DEVICE_MATRIX_FILE := $(PLATFORM_PATH)/configs/vintf/compatibility_matrix.xml
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(PLATFORM_PATH)/configs/vintf/manifest.xml
 
-
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_PARTITION_SIZE := 402653184
@@ -124,6 +123,11 @@ TARGET_USES_MKE2FS := true
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 TARGET_USES_INTERACTION_BOOST := true
+
+# Properties
+TARGET_SYSTEM_EXT_PROP += $(PLATFORM_PATH)/system_ext.prop
+TARGET_SYSTEM_PROP += $(PLATFORM_PATH)/system.prop
+TARGET_VENDOR_PROP += $(PLATFORM_PATH)/vendor.prop
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
