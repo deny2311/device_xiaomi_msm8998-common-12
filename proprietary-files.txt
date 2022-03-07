@@ -391,8 +391,8 @@ vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e157937
 vendor/lib/vendor.qti.hardware.tui_comm@1.0.so|933eb7026797f3dadad3d10fd69443b11f6563f3
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|16baab27397ad493e845515c20ac0c0c063c775d
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8998.so|cace8224973ea3e280636ece56cb49f01ebdf590
+# Gatekeeper - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib64/hw/gatekeeper.msm8937.so:vendor/lib64/hw/gatekeeper.msm8998.so|2063a807fd2ab5eaeea15f602f7b20544d789a1c
 
 # GPS - from LA.UM.9.12.r1-13300-SMxx50.QSSI12.0
 vendor/bin/garden_app|987a4b0d1f2fc446e384f1d68b041819c8221d07
@@ -528,12 +528,13 @@ vendor/firmware/ipa_fws.mdt|7b199ae4c5419e59b0ebfff1b83674f7931d6061
 # IRQ balance
 vendor/bin/msm_irqbalance|117d7c8a8f6f12b3615ec8ab676231df93d277f1
 
-# Keystore
-vendor/lib64/hw/keystore.msm8998.so|834df7982427c992948a734a585d5ad6b898ab77
+# Keystore - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib64/hw/keystore.msm8937.so:vendor/lib64/hw/keystore.msm8998.so|4e4fea432ecafa65cda2d364b7b4e23e3f84ca08
 
-# Listen
-vendor/lib/hw/sound_trigger.primary.msm8998.so|ba7551c442e646f4e2065e43cee8c2fccb19c17b
-vendor/lib/libsmwrapper.so|3926c3928c7276f34dd851798552f7433e86bbf5
+# Listen - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/hw/sound_trigger.primary.msm8937.so:vendor/lib/hw/sound_trigger.primary.msm8998.so|fb5605556024921c2f5bad844d7ae4a3a0822af7
+vendor/lib/libadpcmdec.so|7a38d6b28b27cf663681ad077614a03164418f91
+vendor/lib/libsmwrapper.so|f0ee761c02c888e77d947bb87d162d9379bc1530
 
 # Media
 -vendor/lib/libgpustats.so|138dce3b7ac0c5c080acb122f2dfd1a70037d9aa
@@ -808,15 +809,17 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 vendor/bin/rmt_storage|5ee4fca4b5d914e28d0f3ce6a0df273fa14227e0
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 
+# Sensors  - from LA.UM.9.6.2.r1-04100-89xx.0
+vendor/lib/hw/activity_recognition.msm8937.so:vendor/lib/hw/activity_recognition.msm8998.so|2ed2599ba66045412ba6129c4558c07d16048f49
+vendor/lib64/hw/activity_recognition.msm8937.so:vendor/lib64/hw/activity_recognition.msm8998.so|a2ea3d45507a1a8728ad5f54eeac7857e627695a
+
 # Sensors
 vendor/bin/sensors.qti|948a86c6c2b06e362123d163fc368a2392fc0fd9
-vendor/lib/hw/activity_recognition.msm8998.so|f86813f598e8171fb8c01996937fb28cbf547c21
 vendor/lib/libsdsprpc.so|12a1e04826aa853c33731bac05170116f5efa118
 vendor/lib/libsensor1.so|eac05bf116a5b266366f7783badfd4349dc80d32
 vendor/lib/libsensor_reg.so|7eb400b67a478548393c86c1c40a1e9c9ddecb8f
 vendor/lib/libsns_low_lat_stream_stub.so|16828431f8af68a6abb268605ed61799af1d8279
 vendor/lib/sensors.ssc.so|b499087134eabfaecafa268d79f1ae89ffd6fbd3
-vendor/lib64/hw/activity_recognition.msm8998.so|a4a86f36ac37abef5e002c5482b46ceb727e10c4
 vendor/lib64/libsdsprpc.so|6e3d8b920227deb255359d794325c89f28213d9f
 vendor/lib64/libsensor1.so|42e754146c2d697608934f9fc065d8263aa597c9
 vendor/lib64/libsensor_reg.so|cee932c0b89e7d4e3dd7135c7645a5076eadb8dc
