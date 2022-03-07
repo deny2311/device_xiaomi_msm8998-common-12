@@ -98,6 +98,9 @@ vendor.display.perf_hint_window=50
 vendor.display.use_smooth_motion=1
 vendor.gralloc.enable_fb_ubwc=1
 
+# DPM
+persist.vendor.mwqem.enable=1
+
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf.scroll_opt=true
