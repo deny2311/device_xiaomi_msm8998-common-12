@@ -316,7 +316,4 @@
         <transport>hwbinder</transport>
         <fqname>@3.0::IRTPService/imsrtpservice</fqname>
     </hal>
-    <sepolicy>
-        <version>31.0</version>
-    </sepolicy>
 </manifest>
