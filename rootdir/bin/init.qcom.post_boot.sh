@@ -47,18 +47,9 @@ done
 
 echo "cpufreq" > /sys/class/devfreq/soc:qcom,mincpubw/governor
 
-# configure governor settings for little cluster
-echo "schedutil" > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
-echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
-echo 500 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-
-# configure governor settings for big cluster
-echo "schedutil" > /sys/devices/system/cpu/cpu4/cpufreq/scaling_governor
-echo 10000 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/down_rate_limit_us
-echo 500 > /sys/devices/system/cpu/cpufreq/policy4/schedutil/up_rate_limit_us
-
-# Set up schedtune
-echo 30 > /dev/stune/top-app/schedtune.sched_boost_no_override
+# Set up dynamic stune boost
+echo 3000 > /sys/module/cpu_boost/parameters/dynamic_stune_boost_ms
+echo 10 > /sys/module/cpu_boost/parameters/dynamic_stune_boost
 
 # disable thermal and BCL hotplug
 echo 0 > /sys/module/msm_thermal/core_control/enabled
