@@ -60,3 +60,6 @@ persist.audio.dirac.                                          u:object_r:dirac_p
 # So vendor_default_prop should be marked.
 gpu.stats.debug.level                                         u:object_r:vendor_default_prop:s0
 sdm.                                                          u:object_r:vendor_default_prop:s0
+
+# MWQEM
+persist.vendor.mwqem.                                         u:object_r:vendor_mwqem_prop:s0
