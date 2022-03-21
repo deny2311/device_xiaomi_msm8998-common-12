@@ -1,0 +1,1 @@
+allow vold_prepare_subdirs sysfs_ufs:file { write };
