@@ -25,7 +25,7 @@ PRODUCT_COMPRESSED_APEX := false
 # Overlay
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    CellBroadcastReceiverOverlay \
+    CellBroadcastReceiverCommonOverlay \
     DialerOverlay \
     FrameworksResOverlay \
     SettingsLibOverlay \
