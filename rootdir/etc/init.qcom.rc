@@ -183,6 +183,9 @@ on boot
     # Wifi firmware reload path
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
+    # LED full scale current is 8mA and limit it to 2mA
+    write /sys/class/leds/white/max_brightness 64
+
 on property:sys.boot_completed=1
     # Set runtime stune value
     write /dev/stune/schedtune.prefer_idle 0
