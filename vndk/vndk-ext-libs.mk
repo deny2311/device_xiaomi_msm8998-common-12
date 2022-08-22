@@ -42,7 +42,8 @@ EXTRA_VENDOR_LIBRARIES_32 := \
     libselinux \
     libsonivox \
     libstagefright_foundation \
-    libpermission
+    libpermission \
+    packagemanager_aidl-cpp
 
 EXTRA_VENDOR_LIBRARIES_64 := \
     libaudioclient \
@@ -52,4 +53,5 @@ EXTRA_VENDOR_LIBRARIES_64 := \
     libmediametrics \
     libmediautils \
     libnblog \
-    libpermission
+    libpermission \
+    packagemanager_aidl-cpp
