@@ -25,18 +25,15 @@ PRODUCT_COMPRESSED_APEX := false
 # Overlay
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay \
-    CellBroadcastReceiverCommonOverlay \
     DialerOverlay \
-    FrameworksResOverlay \
-    SettingsLibOverlay \
     SettingsOverlay \
-    SystemUIOverlay \
-    TelecommOverlay \
     TelephonyOverlay \
     WifiOverlay
 
-PRODUCT_ENFORCE_RRO_TARGETS := \
-    framework-res
+PRODUCT_ENFORCE_RRO_TARGETS := *
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS := # leave it empty
+
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Permissions
 PRODUCT_COPY_FILES += \
