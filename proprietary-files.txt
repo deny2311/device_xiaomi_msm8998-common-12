@@ -807,10 +807,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9
 vendor/bin/rmt_storage|5ee4fca4b5d914e28d0f3ce6a0df273fa14227e0
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 
-# Sensors  - from LA.UM.9.6.2.r1-04100-89xx.0
-vendor/lib/hw/activity_recognition.msm8937.so:vendor/lib/hw/activity_recognition.msm8998.so|2ed2599ba66045412ba6129c4558c07d16048f49
-vendor/lib64/hw/activity_recognition.msm8937.so:vendor/lib64/hw/activity_recognition.msm8998.so|a2ea3d45507a1a8728ad5f54eeac7857e627695a
-
 # Sensors
 vendor/bin/sensors.qti|948a86c6c2b06e362123d163fc368a2392fc0fd9
 vendor/lib/libsdsprpc.so|12a1e04826aa853c33731bac05170116f5efa118
