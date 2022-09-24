@@ -1,5 +1,7 @@
 allow hal_nfc_default nfc_vendor_data_file:dir create_dir_perms;
 allow hal_nfc_default nfc_vendor_data_file:{ file lnk_file fifo_file } create_file_perms;
 
-allow hal_nfc_default nxpese_hwservice:hwservice_manager { add find };
-allow hal_nfc_default nxpnfc_hwservice:hwservice_manager { add find };
+add_hwservice(hal_nfc_default, hal_nxpnfc_hwservice)
+add_hwservice(hal_nfc_default, hal_nxpese_hwservice)
+
+binder_call(hal_nfc_default, hal_secure_element_default)
