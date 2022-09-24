@@ -150,5 +150,8 @@ ro.vendor.sensors.taptap_gesture=true
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
 
+# System
+persist.sys.binary_xml=false
+
 # VoLTE
 persist.vendor.qti.telephony.vt_cam_interface=1
