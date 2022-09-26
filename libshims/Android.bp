@@ -13,6 +13,18 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+cc_library_shared {
+    name: "libpiex_shim",
+    srcs: [
+        "lib-piex/lib-piex.cpp",
+    ],
+    vendor: true,
+    shared_libs: [
+        "libpiex",
+        "libutils",
+    ],
+}
+
 cc_library {
     name: "libshim_imsvt",
     srcs: [

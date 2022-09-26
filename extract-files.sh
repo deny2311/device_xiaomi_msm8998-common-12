@@ -97,6 +97,7 @@ function blob_fixup() {
         ;;
 
     vendor/lib/libMiCameraHal.so)
+        "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
         "${PATCHELF}" --replace-needed "libicuuc.so" "libicuuc-v28.so" "${2}"
         "${PATCHELF}" --replace-needed "libminikin.so" "libminikin-v28.so" "${2}"
         ;;
