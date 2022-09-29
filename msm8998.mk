@@ -481,16 +481,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     android.hardware.wifi.hostapd@1.0.vendor \
-    libcld80211 \
-    libQWiFiSoftApCfg \
-    libwifi-hal-ctrl \
     libwifi-hal-qcom \
     libwpa_client \
     hostapd \
     hostapd_cli \
-    dhcpcd.conf \
     wifi-mac-generator \
-    wificond \
     wpa_supplicant \
     wpa_supplicant.conf
 
