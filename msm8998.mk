@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+NEED_AIDL_NDK_PLATFORM_BACKEND  := true
+
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk)
 
 # Enable updating of APEXes
