@@ -5046,17 +5046,18 @@ void GnssAdapter::initDefaultAgps() {
     LOC_LOGD("%s]: ", __func__);
     void *handle = nullptr;
 
-    LocAgpsGetAgpsCbInfo getAgpsCbInfo =
-        (LocAgpsGetAgpsCbInfo)dlGetSymFromLib(handle, "libloc_net_iface.so",
-            "LocNetIfaceAgps_getAgpsCbInfo");
+// Huexxx: libloc_net_iface.so is not on earth, so avoid spam
+//    LocAgpsGetAgpsCbInfo getAgpsCbInfo =
+//        (LocAgpsGetAgpsCbInfo)dlGetSymFromLib(handle, "libloc_net_iface.so",
+//            "LocNetIfaceAgps_getAgpsCbInfo");*/
     // Below step is to make sure we init nativeAgpsHandler
     // for Android platforms only
     AgpsCbInfo cbInfo = {};
-    if (nullptr != getAgpsCbInfo) {
-        cbInfo = getAgpsCbInfo(agpsOpenResultCb, agpsCloseResultCb, this);
-    } else {
+//    if (nullptr != getAgpsCbInfo) {
+//        cbInfo = getAgpsCbInfo(agpsOpenResultCb, agpsCloseResultCb, this);
+//    } else {*/
         cbInfo = mNativeAgpsHandler.getAgpsCbInfo();
-    }
+//    }
 
     if (cbInfo.statusV4Cb == nullptr) {
         LOC_LOGE("%s]: statusV4Cb is nullptr!", __func__);
