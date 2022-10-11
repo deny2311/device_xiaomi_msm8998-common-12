@@ -3,6 +3,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.dex2oat-minidebuginfo=false \
     dalvik.vm.minidebuginfo=false
 
+# Enable zygote critical window.
+PRODUCT_PROPERTY_OVERRIDES += \
+    zygote.critical_window.minute=10
+
 # IORap: Disable
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.iorapd.enable=false
