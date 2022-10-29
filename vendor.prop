@@ -73,7 +73,7 @@ vendor.audio.use.sw.ape.decoder=true
 vendor.audio_hal.period_size=192
 
 # Bluetooth
-vendor.qcom.bluetooth.soc=cherokee
+persist.vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 persist.vendor.camera.HAL3.enabled=1
