@@ -272,4 +272,5 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
     class main
     user root
     group system wakelock
+    capabilities BLOCK_SUSPEND WAKE_ALARM
     task_profiles ServiceCapacityLow
