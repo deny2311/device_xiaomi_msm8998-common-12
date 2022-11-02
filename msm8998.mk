@@ -96,7 +96,9 @@ PRODUCT_COPY_FILES += \
 # ART
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     Settings \
-    SystemUI
+    SettingsGoogle \
+    SystemUI \
+    SystemUIGoogle
 
 DONT_DEXPREOPT_PREBUILTS := true
 PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
