@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package com.huexxx.settings.doze;
+package org.huexxx.settings.doze;
 
 import android.app.Service;
 import android.content.BroadcastReceiver;

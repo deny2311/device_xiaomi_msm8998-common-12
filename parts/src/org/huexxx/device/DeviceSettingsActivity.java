@@ -16,7 +16,7 @@
 *
 */
 
-package org.omnirom.device;
+package org.huexxx.device;
 
 import android.os.Bundle;
 

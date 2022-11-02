@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device;
+package org.huexxx.device;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -26,15 +26,15 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceScreen;
 
-import org.omnirom.device.Preference.ButtonSwapPreference;
-import org.omnirom.device.Preference.FastChargePreference;
-import org.omnirom.device.Preference.S2SVibratorStrengthPreference;
-import org.omnirom.device.Preference.SweepToSleepPreference;
+import org.huexxx.device.Preference.ButtonSwapPreference;
+import org.huexxx.device.Preference.FastChargePreference;
+import org.huexxx.device.Preference.S2SVibratorStrengthPreference;
+import org.huexxx.device.Preference.SweepToSleepPreference;
 
-import static org.omnirom.device.Preference.ButtonSwapPreference.BUTTONS_SWAP_KEY;
-import static org.omnirom.device.Preference.FastChargePreference.USB_FAST_CHARGE_KEY;
-import static org.omnirom.device.Preference.S2SVibratorStrengthPreference.KEY_S2S_VIBSTRENGTH;
-import static org.omnirom.device.Preference.SweepToSleepPreference.S2S_KEY;
+import static org.huexxx.device.Preference.ButtonSwapPreference.BUTTONS_SWAP_KEY;
+import static org.huexxx.device.Preference.FastChargePreference.USB_FAST_CHARGE_KEY;
+import static org.huexxx.device.Preference.S2SVibratorStrengthPreference.KEY_S2S_VIBSTRENGTH;
+import static org.huexxx.device.Preference.SweepToSleepPreference.S2S_KEY;
 
 public final class DeviceSettings extends PreferenceFragment {
 
@@ -44,7 +44,7 @@ public final class DeviceSettings extends PreferenceFragment {
     private static final String KEY_CATEGORY_USB_FASTCHARGE = "usb_fastcharge";
 
     private final String KEY_DEVICE_DOZE = "device_doze";
-    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "com.huexxx.settings.doze";
+    private final String KEY_DEVICE_DOZE_PACKAGE_NAME = "org.huexxx.settings.doze";
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {

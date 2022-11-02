@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.omnirom.device.Preference;
+package org.huexxx.device.Preference;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -37,7 +37,7 @@ import androidx.annotation.DimenRes;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import org.omnirom.device.R;
+import org.huexxx.device.R;
 
 public class SeekBarPreferenceCham extends Preference implements SeekBar.OnSeekBarChangeListener {
 

@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device.Preference;
+package org.huexxx.device.Preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -25,7 +25,7 @@ import android.util.AttributeSet;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 
-import org.omnirom.device.utils.FileUtils;
+import org.huexxx.device.utils.FileUtils;
 
 public final class SweepToSleepPreference extends ListPreference implements
         Preference.OnPreferenceChangeListener {

@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device.Preference;
+package org.huexxx.device.Preference;
 
 import android.annotation.WorkerThread;
 import android.content.SharedPreferences;

@@ -20,7 +20,7 @@
         android:title="@string/display_title">
 
         <androidx.preference.Preference
-            android:fragment="org.omnirom.device.DisplayCalibration"
+            android:fragment="org.huexxx.device.DisplayCalibration"
             android:icon="@drawable/ic_kcal"
             android:key="kcal"
             android:summary="@string/kcal_summary"
@@ -33,14 +33,14 @@
             android:title="@string/device_doze_title">
             <intent
                 android:action="android.intent.action.MAIN"
-                android:targetClass="com.huexxx.settings.doze.DozeSettingsActivity"
-                android:targetPackage="com.huexxx.settings.doze" />
+                android:targetClass="org.huexxx.settings.doze.DozeSettingsActivity"
+                android:targetPackage="org.huexxx.settings.doze" />
         </androidx.preference.Preference>
     </androidx.preference.PreferenceCategory>
 
     <androidx.preference.PreferenceCategory android:title="@string/s2s_title">
 
-        <org.omnirom.device.Preference.SweepToSleepPreference
+        <org.huexxx.device.Preference.SweepToSleepPreference
             android:defaultValue="0"
             android:entries="@array/s2sArray"
             android:entryValues="@array/s2sValues"
@@ -49,7 +49,7 @@
             android:summary="@string/s2s_title_summary"
             android:title="@string/s2s_title_head" />
 
-        <org.omnirom.device.Preference.S2SVibratorStrengthPreference
+        <org.huexxx.device.Preference.S2SVibratorStrengthPreference
             android:icon="@drawable/ic_vibrate"
             android:key="s2s_vib_strength"
             android:title="@string/s2s_vib_strength_title_head"
@@ -62,14 +62,14 @@
         android:key="hw_buttons"
         android:title="@string/hw_buttons_title">
 
-        <org.omnirom.device.Preference.ButtonSwapPreference
+        <org.huexxx.device.Preference.ButtonSwapPreference
             android:defaultValue="false"
             android:icon="@drawable/ic_swap_btn"
             android:key="buttons_swap"
             android:summary="@string/swap_hw_buttons_summary"
             android:title="@string/swap_hw_buttons_title" />
 
-        <org.omnirom.device.Preference.BacklightPreference
+        <org.huexxx.device.Preference.BacklightPreference
             android:icon="@drawable/ic_led_btn"
             android:iconSpaceReserved="true"
             android:key="btn_brightness"
@@ -84,7 +84,7 @@
         android:key="usb_fastcharge"
         android:title="@string/usb_fastcharge_title">
 
-        <org.omnirom.device.Preference.FastChargePreference
+        <org.huexxx.device.Preference.FastChargePreference
             android:defaultValue="false"
             android:icon="@drawable/ic_usb_fastcharge"
             android:key="fastcharge"

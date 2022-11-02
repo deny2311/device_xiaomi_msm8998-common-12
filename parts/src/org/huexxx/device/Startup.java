@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device;
+package org.huexxx.device;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -25,11 +25,11 @@ import android.content.SharedPreferences;
 
 import androidx.preference.PreferenceManager;
 
-import org.omnirom.device.Preference.BacklightPreference;
-import org.omnirom.device.Preference.ButtonSwapPreference;
-import org.omnirom.device.Preference.FastChargePreference;
-import org.omnirom.device.Preference.S2SVibratorStrengthPreference;
-import org.omnirom.device.Preference.SweepToSleepPreference;
+import org.huexxx.device.Preference.BacklightPreference;
+import org.huexxx.device.Preference.ButtonSwapPreference;
+import org.huexxx.device.Preference.FastChargePreference;
+import org.huexxx.device.Preference.S2SVibratorStrengthPreference;
+import org.huexxx.device.Preference.SweepToSleepPreference;
 
 public final class Startup extends BroadcastReceiver {
 

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.omnirom.device.utils;
+package org.huexxx.device.utils;
 
 import android.util.Log;
 

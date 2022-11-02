@@ -1,4 +1,4 @@
-package org.omnirom.device;
+package org.huexxx.device;
 
 import android.content.Context;
 import android.content.Intent;

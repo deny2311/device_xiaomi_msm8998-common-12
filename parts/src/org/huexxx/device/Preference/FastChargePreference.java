@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device.Preference;
+package org.huexxx.device.Preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -26,7 +26,7 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import org.omnirom.device.utils.FileUtils;
+import org.huexxx.device.utils.FileUtils;
 
 public final class FastChargePreference extends SwitchPreference
         implements Preference.OnPreferenceChangeListener {

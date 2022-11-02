@@ -16,7 +16,7 @@
  *
  */
 
-package org.omnirom.device;
+package org.huexxx.device;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -29,11 +29,11 @@ import androidx.preference.PreferenceFragment;
 import androidx.preference.PreferenceManager;
 import androidx.preference.SwitchPreference;
 
-import org.omnirom.device.Preference.KcalSeekBarPreference;
-import org.omnirom.device.utils.FileUtils;
-import org.omnirom.device.utils.UtilsKCAL;
+import org.huexxx.device.Preference.KcalSeekBarPreference;
+import org.huexxx.device.utils.FileUtils;
+import org.huexxx.device.utils.UtilsKCAL;
 
-import static org.omnirom.device.utils.FileUtils.isFileWritable;
+import static org.huexxx.device.utils.FileUtils.isFileWritable;
 
 public final class DisplayCalibration extends PreferenceFragment implements
         OnPreferenceChangeListener {
