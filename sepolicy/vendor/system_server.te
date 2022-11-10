@@ -3,3 +3,6 @@ allow system_server init:binder { call };
 allow system_server crash_dump:process { getpgid };
 allow system_server kernel:system syslog_read;
 allow system_server sysfs:file { getattr open read };
+
+# Smart Charging
+allow system_server sysfs_battery_supply:file rw_file_perms;
